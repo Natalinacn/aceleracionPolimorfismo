@@ -16,10 +16,18 @@ public class Gerente extends Empleado{
         this.area = area;
     }
 
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
     @Override
     public String mostrarDatos() {
 
-        return super.mostrarDatos() + ", area:" + this.area;
+        return "El nombre del Gerente es : " + super.getNombre() + ", su sueldo es de: " + super.getSueldo() + " y pertenece al área " + this.area;
     }
 
 

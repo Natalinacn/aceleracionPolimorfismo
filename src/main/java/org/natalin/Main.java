@@ -1,5 +1,6 @@
 package org.natalin;
 
+import org.natalin.entidades.Contador;
 import org.natalin.entidades.Empleado;
 import org.natalin.entidades.Gerente;
 
@@ -7,22 +8,25 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Empleado objEmpleado = new Empleado();
+        Gerente objGerente = new Gerente();
 
-        objEmpleado.setNombre("Naty");
-        objEmpleado.setSueldo(80000);
+        objGerente.setNombre("Naty");
+        objGerente.setSueldo(80000);
+        objGerente.setArea("Ventas");
 
-        imprimir(objEmpleado);
 
-        Gerente objGerente = new Gerente("Erika", 85000, "Ventas");
 
         imprimir(objGerente);
+
+        Empleado objContador = new Contador("Erika", 85000);
+
+        imprimir(objContador);
 
     }
 
     public static void imprimir(Empleado empleado){
 
-        System.out.println("Datos del empleado: " + empleado.mostrarDatos());
+        System.out.println(empleado.mostrarDatos());
 
 
     }

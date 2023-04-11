@@ -1,9 +1,9 @@
 package org.natalin.entidades;
 
-public class Empleado {
+public abstract class Empleado {
 
-    protected String nombre;
-    protected double sueldo;
+    private String nombre;
+    private double sueldo;
 
     public Empleado() {
     }
@@ -29,10 +29,7 @@ public class Empleado {
         this.sueldo = sueldo;
     }
 
-    public String mostrarDatos() {
-
-        return "Nombre: " + this.nombre + ", sueldo: " + this.sueldo;
-    }
+    public abstract String mostrarDatos();
 
 
 }
